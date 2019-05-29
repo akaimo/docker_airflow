@@ -49,4 +49,5 @@ RUN set -x \
      /usr/share/doc \
      /usr/share/doc-base
 
+COPY airflow.cfg ${AIRFLOW_HOME}/airflow.cfg
 
