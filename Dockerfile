@@ -36,7 +36,7 @@ RUN set -x \
  && pip install pyOpenSSL \
  && pip install ndg-httpsclient \
  && pip install pyasn1 \
- && pip install apache-airflow[crypto,celery,mysql,ssh]==${AIRFLOW_VERSION} \
+ && pip install apache-airflow[crypto,celery,mysql,postgres,ssh]==${AIRFLOW_VERSION} \
  && pip install redis \
  && apt-get purge --auto-remove -y $buildDeps \
  && apt-get autoremove -y --purge \

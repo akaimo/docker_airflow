@@ -3,11 +3,19 @@ services:
   redis:
     image: 'redis:3.2.7'
 
+  postgres:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+
   webserver:
     build:
       context: .
     depends_on:
       - redis
+      - postgres
     ports:
       - "8080:8080"
     command: webserver
