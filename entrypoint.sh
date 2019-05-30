@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export AIRFLOW__CORE__FERNET_KEY=QY3C8naPIFquXNBAmdD_hbuDImKxzcoP5r1Ylnr7oVA=
+
 case "$1" in
   webserver)
     airflow initdb
