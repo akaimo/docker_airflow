@@ -15,7 +15,7 @@ wait_for_port() {
 }
 
 wait_for_port "Redis" "redis" "6379"
-wait_for_port "Postgres" "postgres" "5432"
+wait_for_port "MySQL", "mysql" "3306"
 
 case "$1" in
   webserver)
