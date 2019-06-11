@@ -40,7 +40,16 @@ services:
       - ./dags:/usr/local/airflow/dags
     command: scheduler
 
-  worker:
+  worker_a:
+    build:
+      context: .
+    depends_on:
+      - scheduler
+    volumes:
+      - ./dags:/usr/local/airflow/dags
+    command: worker
+
+  worker_b:
     build:
       context: .
     depends_on:
